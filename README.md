@@ -49,6 +49,18 @@ Now you can **add a macro** to MacroDroid:
 
 ![Macro intent screenshot](/docs/imgs/MacroDroid_SendIntent.png)
 
+Adding a new Tasker task:
+*  Open Tasker and create a new task (On the *Tasks* tab, tap on the ➕ symbol, give it a name, and tap the ✔)
+*  Tap the ➕ button to create a new Action
+*  Select the *System* category, then *Send Intent*
+*  Fill out the fields:
+   *  Action: `com.github.cvzi.screenshottile.SCREENSHOT`
+   *  Extra: `secret:yourPasswordFromEarlier`
+   *  Package: `com.github.cvzi.screenshottile`
+   *  Class: `com.github.ipcjs.screenshottile.IntentHandler`
+   *  Target: `Broadcast Receiver`
+   *  (Optional: Extra parameter `partial:true` to open the area selector for a partial screenshot instead of taking a screenshot)
+
 ## Permissions
 
 #### [`android.permission.WRITE_EXTERNAL_STORAGE`](https://developer.android.com/reference/android/Manifest.permission#WRITE_EXTERNAL_STORAGE) "Photos/Media/Files and Storage"
